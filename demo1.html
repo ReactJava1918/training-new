@@ -20,6 +20,24 @@ function add()
     // Display result in span
     document.getElementById("value").innerHTML = "Result: " + result;
 }
+
+function sub()
+{
+    // Corrected .value property (remove parentheses)
+    var v1 = document.getElementById("subtext1").value;
+    var v2 = document.getElementById("subtext2").value;
+    
+    // Convert string to number using Number()
+    var result = Number(v1) - Number(v2);
+    
+    // Display alerts
+    alert("Value 1: " + v1);
+    alert("Value 2: " + v2);
+    
+    // Display result in span
+    document.getElementById("subvalue").innerHTML = "Result: " + result;
+}
+
 </script>
 
 <body style="background-color: red;">
@@ -28,5 +46,15 @@ function add()
     <input type="submit" value="Add" onClick="add()"/>
     <br>
     <span id="value"></span>
+
+<h1>SUB</h1>
+
+ Enter first number:- <input type="text" id="subtext1">
+    Enter second number:- <input type="text" id="subtext2">
+    <input type="submit" value="Sub" onClick="sub()"/>
+    <br>
+    <span id="subvalue"></span>
+
+
 </body>
 </html>
