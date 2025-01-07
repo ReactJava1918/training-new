@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Addition Calculator</title>
+</head>
+<script>
+function add()
+{
+    // Corrected .value property (remove parentheses)
+    var v1 = document.getElementById("text1").value;
+    var v2 = document.getElementById("text2").value;
+    
+    // Convert string to number using Number()
+    var result = Number(v1) + Number(v2);
+    
+    // Display alerts
+    alert("Value 1: " + v1);
+    alert("Value 2: " + v2);
+    
+    // Display result in span
+    document.getElementById("value").innerHTML = "Result: " + result;
+}
+</script>
+
+<body style="background-color: red;">
+    Enter first number:- <input type="text" id="text1">
+    Enter second number:- <input type="text" id="text2">
+    <input type="submit" value="Add" onClick="add()"/>
+    <br>
+    <span id="value"></span>
+</body>
+</html>
